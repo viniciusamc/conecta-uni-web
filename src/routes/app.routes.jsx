@@ -9,6 +9,7 @@ import { SignUp } from '../pages/SignUp';
 import { Login } from '../pages/Login';
 import { NotFound } from '../pages/NotFound';
 import { CreateProject } from '../pages/CreateProject';
+import { CreateUniversity } from '../pages/CreateUniversity';
 
 export function AppRoutes({ user }) {
     return (
@@ -21,6 +22,7 @@ export function AppRoutes({ user }) {
             {!user && <Route path="/signup" element={<SignUp />} />}
             {!user && <Route path="/login" element={<Login />} />}
             {user && <Route path="/projects/create" element={<CreateProject />} />}
+            {user && <Route path="/university/create" element={<CreateUniversity />} />}
             <Route path="*" element={<NotFound />} />
         </Routes>
     );

@@ -48,7 +48,7 @@ export function Home() {
                                     <Top>
                                         <h5>{item.university}</h5>
                                         <img
-                                            src={logoUniversidade}
+                                            src={`${api.defaults.baseURL}images/${item.image}`}
                                             alt={item.university}
                                             style={{
                                                 objectFit: 'contain'
